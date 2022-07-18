@@ -17,7 +17,7 @@ nav
 
 body
   overflow-x: hidden
-  font-family: 'Noto Serif', serif
+  font-family: 'Noto Serif', serif !important
   p
     text-align: justify
     letter-spacing: .05em
@@ -47,13 +47,14 @@ body
   width: 0
   height: 0
   right: 0
-  border-top: 400px solid $bg-one
-  border-left: 400px solid transparent
+  border-top: 800px solid $bg-one
+  border-left: 800px solid transparent
 
 .card-header
   background-color: inherit
   border-bottom: 1px dashed rgba(0,0,0,.125)
   font-weight: bold
+  letter-spacing: 1px
 
 #background
   width: 100vw
@@ -122,6 +123,7 @@ body
       margin-top: 0.5rem
       i
         margin-right: 2rem
+        font-size: 16px
       font-size: 0.9rem
 
 .sticky
@@ -148,6 +150,15 @@ h4
 
 .timeline-title
   line-height: 1.5rem
+
+@media only screen and (min-width: 1200px)
+  #triangle
+    border-bottom: 400px solid $bg-two
+    border-right: 400px solid transparent
+  #triangle-two
+    border-top: 300px solid $bg-one
+    border-left: 300px solid transparent
+
 
 @media only screen and (max-width: 767px)
   .timeline
@@ -199,3 +210,13 @@ h4
     li
       a
         color: $white
+
+.btn-primary
+  background-color: darken(#F79B77, 20)
+  border-color: darken(#F79B77, 20)
+  &:hover
+    background-color: #F79B77
+    border-color: #F79B77
+
+.btn
+  letter-spacing: 1px
